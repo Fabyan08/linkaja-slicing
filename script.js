@@ -30,6 +30,51 @@ nextBtn.addEventListener("click", () => {
 });
 
 // Howto
+const howtoWrapper = document.getElementById("howtoWrapper");
+
+let startX = 0;
+let isDragging = false;
+
+// TOUCH (HP)
+howtoWrapper.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+howtoWrapper.addEventListener("touchend", (e) => {
+  let endX = e.changedTouches[0].clientX;
+  handleSwipe(startX, endX);
+});
+
+// MOUSE (DESKTOP)
+howtoWrapper.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.clientX;
+});
+
+howtoWrapper.addEventListener("mouseup", (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+
+  let endX = e.clientX;
+  handleSwipe(startX, endX);
+});
+
+// FUNCTION SWIPE
+function handleSwipe(start, end) {
+  let diff = start - end;
+
+  if (diff > 50) {
+    // swipe kiri → next
+    indexHowto++;
+    if (indexHowto > 2) indexHowto = 0;
+  } else if (diff < -50) {
+    // swipe kanan → prev
+    indexHowto--;
+    if (indexHowto < 0) indexHowto = 2;
+  }
+
+  updateHowto();
+}
 
 const howtoCards = document.querySelectorAll(".howto-card");
 const howtoDots = document.querySelectorAll(".howto-dot");
@@ -56,3 +101,16 @@ howtoNext.addEventListener("click", () => {
 });
 
 updateHowto();
+
+// FAQ
+
+const items = document.querySelectorAll(".faq-item");
+
+items.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+    items.forEach((i) => i.classList.remove("active"));
+    item.classList.add("active");
+  });
+});
