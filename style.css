@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Mulish", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background: white;
-  overflow-x: hidden !important; ;
+  overflow-x: hidden !important;
 }
 
 .logo {
@@ -538,6 +539,7 @@ body {
 
 .merchant-container {
   max-width: 1200px;
+  padding: 10px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -934,6 +936,7 @@ body {
 /* FOOTER */
 .footer {
   position: relative;
+  z-index: 99999999999999999999999999999;
   background:
     linear-gradient(rgba(255, 45, 45, 0.95), rgba(255, 45, 45, 0.95)),
     url("img/footer-bg.png");
@@ -942,13 +945,30 @@ body {
   color: #fff;
   padding: 100px 0 0;
 }
-
-/* SCROLL */
+a {
+  text-decoration: none;
+  color: white;
+}
+/* SCROLL BUTTON */
 .scroll-top {
   position: absolute;
-  top: -25px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
+
+  width: 55px;
+  height: 55px;
+  background: #1f2937;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+.scroll-top {
+  margin-top: -20px;
   width: 55px;
   height: 55px;
   background: #1f2937;
