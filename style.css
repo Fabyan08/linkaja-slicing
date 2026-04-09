@@ -1085,3 +1085,193 @@ a {
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* HALAMAN TENTANG KAMI */
+/* ========================= */
+/* TENTANG KAMI */
+/* ========================= */
+.tentang-kami {
+  padding: 120px 10% 60px;
+  font-family: "Mulish", sans-serif;
+}
+
+/* CONTAINER */
+.tentang-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TITLE */
+.tentang-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 50px;
+}
+
+/* WRAPPER */
+.tentang-wrapper {
+  display: flex;
+  background: #f4f6fb;
+}
+
+/* CARD */
+.tentang-card {
+  padding: 50px;
+  border-radius: 14px;
+  color: #52575c;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* IMAGE */
+
+.tentang-image img {
+  margin-top: -50px;
+  width: 600px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.tentang-image-mobile img {
+  width: 350px;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.tentang-image-mobile {
+  display: none;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 1024px) {
+  .tentang-card {
+    width: 65%;
+  }
+
+  .tentang-image img {
+    width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tentang-kami {
+    padding: 100px 20px 40px;
+  }
+
+  .tentang-image-mobile {
+    display: flex;
+  }
+
+  .tentang-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tentang-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .tentang-image {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .tentang-image img {
+    width: 100%;
+  }
+
+  .tentang-card {
+    width: 100%;
+    padding: 25px;
+    font-size: 14px;
+  }
+
+  .tentang-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .tentang-image {
+    display: none;
+  }
+}
+
+/* TVM */
+
+/* ========================= */
+/* TUJUAN VISI MISI */
+/* ========================= */
+.tvm {
+  padding: 80px 10%;
+  font-family: "Mulish", sans-serif;
+}
+
+.tvm-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ITEM */
+.tvm-item {
+  flex: 1;
+  text-align: left;
+}
+
+/* ICON */
+.tvm-item img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.tvm-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.tvm-text p {
+  color: #52575c;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+  .tvm {
+    padding: 50px 20px;
+  }
+
+  .tvm-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .tvm-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tvm-item img {
+    width: 55px;
+    margin-bottom: 0;
+  }
+
+  .tvm-text h3 {
+    font-size: 16px;
+  }
+
+  .tvm-text p {
+    font-size: 13px;
+  }
+}
