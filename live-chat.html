@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Live Chat LinkAja</title>
+    <link rel="stylesheet" href="live-chat.css" />
+    <link rel="shortcut icon" href="linkaja.png" type="image/x-icon" />
+    <style></style>
+  </head>
+  <body>
+    <div class="chat-app">
+      <header class="chat-header">
+        <h1>Live Chat</h1>
+      </header>
+
+      <div class="chat-body">
+        <div class="chat-banner">
+          <img
+            src="https://placehold.co/600x250/dbeafe/1e3a8a?text=Ilustrasi"
+            alt="Banner CS"
+          />
+        </div>
+
+        <div class="form-card">
+          <div class="alert-info">
+            <svg
+              class="alert-icon"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+            <p class="alert-text">
+              Silakan masukkan data diri & keluhan kamu terlebih dahulu, ya!
+            </p>
+          </div>
+
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="nama" class="form-label">Nama Lengkap</label>
+              <input
+                type="text"
+                id="nama"
+                class="form-control"
+                placeholder="Masukkan Nama Lengkap"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Masukkan Email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label"
+                >Nomor handphone LinkAja</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                placeholder="Masukkan Nomor Handphone"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="keluhan" class="form-label">Keluhan</label>
+              <select id="keluhan" class="form-control" required>
+                <option value="" disabled selected>Keluhan</option>
+                <option value="transaksi">Kendala Transaksi</option>
+                <option value="akun">Kendala Akun</option>
+                <option value="promo">Info Promo</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subjek" class="form-label">Subjek</label>
+              <textarea
+                id="subjek"
+                class="form-control"
+                placeholder="Ceritakan permasalahan kamu"
+                required
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer class="chat-footer">
+        <button type="submit" class="btn-submit">Mulai Percakapan</button>
+      </footer>
+    </div>
+  </body>
+</html>
