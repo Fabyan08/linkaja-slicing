@@ -104,16 +104,16 @@ updateHowto();
 
 // FAQ
 
-const items = document.querySelectorAll(".faq-item");
+// const items = document.querySelectorAll(".faq-item");
 
-items.forEach((item) => {
-  const question = item.querySelector(".faq-question");
+// items.forEach((item) => {
+//   const question = item.querySelector(".faq-question");
 
-  question.addEventListener("click", () => {
-    items.forEach((i) => i.classList.remove("active"));
-    item.classList.add("active");
-  });
-});
+//   question.addEventListener("click", () => {
+//     items.forEach((i) => i.classList.remove("active"));
+//     item.classList.add("active");
+//   });
+// });
 
 // SLIDER TENTANG KAMI
 document.addEventListener("DOMContentLoaded", function () {

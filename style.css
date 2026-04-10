@@ -1875,5 +1875,174 @@ a {
   }
 }
 
-
 /* LIVE CHAT */
+
+/* FAQ HOME */
+
+.faq-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr; /* Pembagian kolom Desktop */
+  gap: 60px;
+  align-items: start;
+}
+
+/* --- BAGIAN JUDUL (KIRI) --- */
+.faq-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b132a;
+  line-height: 1.4;
+}
+
+/* --- BAGIAN ACCORDION (KANAN) --- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Tombol Pertanyaan */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  padding-right: 20px;
+  line-height: 1.5;
+}
+
+/* Ikon Panah Merah */
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #ef4444; /* Merah */
+  stroke-width: 2.5;
+  fill: none;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Konten Jawaban */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #f8f9fb; /* Latar abu-abu muda */
+}
+
+.faq-answer-inner {
+  padding: 0 24px 24px 24px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #1a202c;
+}
+
+/* Spasi tambahan atas saat konten terbuka */
+.faq-item.active .faq-answer-inner {
+  padding-top: 16px;
+}
+
+/* Putar ikon saat aktif */
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* --- STYLING KONTEN DI DALAM JAWABAN --- */
+.faq-answer-inner p {
+  margin-bottom: 16px;
+}
+
+.faq-answer-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* Bullet List (Titik) */
+.faq-bullet-list {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.faq-bullet-list li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+/* Numbered List Kustom (Kotak Abu-abu) */
+.faq-number-list {
+  list-style: none; /* Hilangkan angka default */
+  counter-reset: custom-counter;
+}
+
+.faq-number-list li {
+  counter-increment: custom-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Membuat kotak angka abu-abu sesuai desain */
+.faq-number-list li::before {
+  content: counter(custom-counter);
+  background-color: #e2e8f0; /* Warna kotak abu-abu */
+  color: #64748b; /* Warna teks angka */
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px; /* Menyelaraskan dengan baris pertama teks */
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-container {
+    grid-template-columns: 1fr; /* Tumpuk ke bawah */
+    gap: 24px;
+  }
+
+  .faq-title h2 {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    padding: 20px 0;
+  }
+
+  .faq-answer-inner {
+    padding: 0 16px 20px 16px;
+  }
+}
