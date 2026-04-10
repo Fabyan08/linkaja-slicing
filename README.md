@@ -23,11 +23,6 @@ Project ini hanya mencakup beberapa bagian utama, yaitu:
 
 * ✅ **Beranda (Homepage)**
 * ✅ **Tentang Kami**
-* ✅ **Fitur "Chat with an Expert" (UI saja)**
-
----
-## 🙌 Catatan
-
-Jika ada perbedaan kecil dari website asli (spacing, font, dll), itu merupakan bagian dari proses pembelajaran slicing.
+* ✅ **Fitur "Chat with an Expert"**
 
 ---
